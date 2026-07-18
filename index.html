@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arappurayil Travel Agency — Luxury Journeys Redefined</title>
+  <link rel="icon" type="image/jpeg" href="logo.jpg">
+  <meta name="description" content="Arappurayil Travel Agency offers premium, handcrafted travel experiences across Kerala, Kashmir, Goa, Himachal, Punjab and beyond. Discover luxury journeys tailored just for you." />
+  <meta name="keywords" content="Arappurayil Travel, Kerala backwaters, Munnar, Kashmir, Goa, Himachal, luxury travel, India travel agency, premium tours, Punjab travel" />
+  <meta name="author" content="Arappurayil Travel Agency" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://arappurayiltravel.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://arappurayiltravel.com/" />
+  <meta property="og:title" content="Arappurayil Travel Agency — Luxury Journeys Redefined" />
+  <meta property="og:description" content="Premium, handcrafted travel experiences across India's most breathtaking destinations." />
+  <meta property="og:image" content="assets/images/logo.jpg" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Arappurayil Travel Agency" />
+  <meta name="twitter:description" content="Premium travel experiences across India's most breathtaking destinations." />
+  <meta name="twitter:image" content="assets/images/logo.jpg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Arappurayil Travel Agency",
+    "description": "Premium, handcrafted travel experiences across India.",
+    "telephone": "+916238305540",
+    "email": "arappurayiltravelagency@gmail.com",
+    "address": [
+      {
+        "@type": "PostalAddress",
+        "addressLocality": "Trivandrum",
+        "addressRegion": "Kerala",
+        "addressCountry": "IN"
+      }
+    ],
+    "url": "https://arappurayiltravel.com",
+    "sameAs": [
+      "https://instagram.com/arappurayil_travel_agency",
+      "https://wa.me/916238305540"
+    ]
+  }
+  </script>
+
+  <style>
+    /* ==============================
+       CSS CUSTOM PROPERTIES
+    ============================== */
+    :root {
+      --gold: #C9A227;
+      --gold-light: #E8C547;
+      --gold-dark: #9B7A0F;
+      --black: #080808;
+      --black-soft: #111111;
+      --black-mid: #1a1a1a;
+      --white: #FAFAFA;
+      --white-soft: #F0F0F0;
+      --gray: #888888;
+      --gray-light: #CCCCCC;
+      --glass: rgba(255,255,255,0.05);
+      --glass-border: rgba(255,255,255,0.12);
+      --glass-strong: rgba(255,255,255,0.10);
+      --glass-dark: rgba(0,0,0,0.4);
+      --font-heading: 'Outfit', sans-serif;
+      --font-body: 'Poppins', sans-serif;
+      --nav-h: 90px;
+      --radius: 16px;
+      --radius-lg: 24px;
+      --shadow: 0 20px 60px rgba(0,0,0,0.4);
+      --shadow-gold: 0 0 40px rgba(201,162,39,0.25);
+      --transition: cubic-bezier(0.4, 0, 0.2, 1);
+      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+      --whatsapp-green: #25D366;
+    }
+
+    /* ==============================
+       RESET & BASE
+    ============================== */
+    *, *::before, *::after {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      overflow-x: hidden;
+    }
+    body {
+      font-family: var(--font-body);
+      background: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection { background: var(--gold); color: var(--black); }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    button { border: none; outline: none; cursor: pointer; font-family: var(--font-body); }
+    ul { list-style: none; }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 5px; height: 6px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+    /* ==============================
+       LOADER
+    ============================== */
+    #page-loader {
+      position: fixed; inset: 0; z-index: 9999;
+      background: var(--black);
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 24px;
+      transition: opacity 0.8s var(--transition), visibility 0.8s;
+    }
+    #page-loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+    .loader-logo {
+      width: 80px; height: 80px;
+      border-radius: 50%; overflow: hidden;
+      border: 2px solid var(--gold);
+      animation: loaderPulse 1.5s ease-in-out infinite;
+    }
+    .loader-logo img { width: 100%; height: 100%; object-fit: cover; }
+    .loader-bar {
+      width: 200px; height: 2px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 2px; overflow: hidden;
+    }
+    .loader-bar-fill {
+      height: 100%; width: 0%;
+      background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-light));
+      border-radius: 2px;
+    }
+    .loader-text {
+      font-family: var(--font-heading);
+      font-size: 0.75rem; letter-spacing: 0.4em;
+      color: var(--gray); text-transform: uppercase;
+    }
+    @keyframes loaderPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(201,162,39,0.4); }
+      50% { box-shadow: 0 0 0 16px rgba(201,162,39,0); }
+    }
+
+    /* ==============================
+       NAVIGATION
+    ============================== */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 1000;
+      height: var(--nav-h);
+      padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      background: #000000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+      transition: height 0.4s var(--ease-out-expo);
+    }
+    #navbar.scrolled {
+      background: #000000;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.95);
+    }
+
+    .nav-logo {
+      display: flex; align-items: center; gap: 16px;
+      text-decoration: none;
+    }
+    .nav-logo-img {
+      width: clamp(52px, 5vw, 64px);
+      height: clamp(52px, 5vw, 64px);
+      border-radius: 50%; overflow: hidden;
+      border: 2px solid var(--gold);
+      transition: transform 0.3s var(--transition), box-shadow 0.3s;
+      flex-shrink: 0;
+    }
+    .nav-logo-img:hover {
+      transform: scale(1.05);
+      box-shadow: var(--shadow-gold);
+    }
+    .nav-logo-img img { width: 100%; height: 100%; object-fit: cover; }
+    
+    .nav-logo-text {
+      display: flex; flex-direction: column;
+      line-height: 1.15;
+    }
+    .nav-brand {
+      font-family: var(--font-heading);
+      font-size: clamp(1.25rem, 2vw, 1.65rem);
+      font-weight: 800;
+      color: var(--white); letter-spacing: 0.02em;
+    }
+    .nav-sub {
+      font-size: clamp(0.65rem, 0.9vw, 0.75rem);
+      font-weight: 500;
+      color: var(--gold); letter-spacing: 0.28em;
+      text-transform: uppercase;
+      margin-top: 1px;
+    }
+
+    .nav-links {
+      display: flex; align-items: center; gap: 36px;
+    }
+    .nav-link {
+      position: relative;
+      font-family: var(--font-body);
+      font-size: 0.82rem; font-weight: 500;
+      color: rgba(255,255,255,0.75);
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 4px 0;
+      transition: color 0.3s;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute; bottom: -2px; left: 0;
+      width: 0; height: 1.5px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      border-radius: 2px;
+      transition: width 0.4s var(--ease-out-expo);
+    }
+    .nav-link:hover, .nav-link.active {
+      color: var(--white);
+    }
+    .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+    .nav-link.active { color: var(--gold); }
+
+    .nav-cta {
+      display: flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      color: var(--black);
+      font-family: var(--font-heading);
+      font-size: 0.78rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 10px 22px;
+      border-radius: 50px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .nav-cta:hover {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 8px 24px rgba(201,162,39,0.5);
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 10px;
+      background: var(--glass); border: 1px solid var(--glass-border);
+      border-radius: 10px; backdrop-filter: blur(10px);
+      transition: background 0.3s;
+    }
+    .hamburger:hover { background: rgba(201,162,39,0.15); }
+    .hamburger span {
+      display: block; width: 22px; height: 1.5px;
+      background: var(--white); border-radius: 2px;
+      transition: transform 0.4s var(--ease-out-expo), opacity 0.3s, background 0.3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); background: var(--gold); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); background: var(--gold); }
+
+    /* Mobile Menu */
+    .mobile-menu {
+      position: fixed; top: var(--nav-h); left: 0; right: 0;
+      background: rgba(0, 0, 0, 0.98);
+      backdrop-filter: blur(32px) saturate(1.8);
+      -webkit-backdrop-filter: blur(32px) saturate(1.8);
+      border-bottom: 1px solid var(--glass-border);
+      padding: 32px 5% 40px;
+      display: flex; flex-direction: column; gap: 8px;
+      transform: translateY(-20px) scaleY(0.95);
+      opacity: 0; pointer-events: none;
+      transform-origin: top;
+      transition: transform 0.45s var(--ease-out-expo), opacity 0.35s, top 0.4s var(--ease-out-expo);
+      z-index: 999;
+    }
+    .mobile-menu.open {
+      transform: translateY(0) scaleY(1);
+      opacity: 1; pointer-events: all;
+    }
+    .mobile-link {
+      display: flex; align-items: center; gap: 12px;
+      font-family: var(--font-heading);
+      font-size: 1.5rem; font-weight: 600;
+      color: rgba(255,255,255,0.7);
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      transition: color 0.3s, transform 0.3s;
+    }
+    .mobile-link:last-of-type { border-bottom: none; }
+    .mobile-link span.num {
+      font-size: 0.65rem; color: var(--gold);
+      font-family: var(--font-body); letter-spacing: 0.2em;
+    }
+    .mobile-link:hover { color: var(--white); transform: translateX(8px); }
+    .mobile-social {
+      display: flex; gap: 16px; margin-top: 24px; padding-top: 24px;
+      border-top: 1px solid var(--glass-border);
+    }
+    .mobile-social a {
+      width: 42px; height: 42px; border-radius: 50%;
+      background: var(--glass); border: 1px solid var(--glass-border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem; color: var(--gray);
+      transition: background 0.3s, color 0.3s, transform 0.3s;
+    }
+    .mobile-social a:hover {
+      background: rgba(201,162,39,0.2);
+      color: var(--gold); transform: scale(1.1);
+    }
+
+    @media (max-width: 991px) {
+      :root { --nav-h: 85px; }
+      #navbar { padding: 0 4%; }
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .hamburger { display: flex; }
+    }
+
+    @media (max-width: 480px) {
+      :root { --nav-h: 76px; }
+      #navbar { padding: 0 16px; }
+      .nav-logo { gap: 12px; }
+      .nav-logo-img { width: 46px; height: 46px; border-width: 1.5px; }
+      .nav-brand { font-size: 1.2rem; }
+      .nav-sub { font-size: 0.58rem; letter-spacing: 0.22em; }
+      .hamburger { padding: 8px; gap: 4px; }
+      .hamburger span { width: 18px; }
+      .hamburger.open span:nth-child(1) { transform: translateY(5.5px) rotate(45deg); }
+      .hamburger.open span:nth-child(3) { transform: translateY(-5.5px) rotate(-45deg); }
+      .mobile-menu { padding: 24px 20px 32px; }
+      .mobile-link { font-size: 1.25rem; padding: 10px 0; }
+    }
+
+    /* ==============================
+       HERO SECTION (UPDATED FOR VIDEO BREAKPOINTS)
+    ============================== */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      height: 100dvh;
+      overflow: hidden;
+      background: #000000;
+    }
+
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: fill; /* Stretches and fills completely on desktop */
+      z-index: 1;
+    }
+
+    .hero-video.mobile-vid {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .hero-video.desktop-vid {
+        display: none;
+      }
+      .hero-video.mobile-vid {
+        display: block;
+        object-fit: cover; /* Retains cropped fill for optimal mobile display */
+      }
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, 
+        rgba(8, 8, 8, 0.1) 0%, 
+        rgba(8, 8, 8, 0.3) 50%, 
+        rgba(8, 8, 8, 0.75) 75%, 
+        rgba(8, 8, 8, 1) 100%
+      );
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      padding-bottom: 70px;
+      text-align: center;
+      z-index: 3;
+    }
+
+    .hero-text-container {
+      max-width: 900px;
+      padding: 0 24px;
+      position: relative;
+      z-index: 4;
+    }
+
+    .hero-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2.2rem, 5.5vw, 4.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+      background: linear-gradient(
+        90deg, 
+        #ffffff 0%, 
+        #ffe49e 25%, 
+        var(--gold-light) 50%, 
+        #ffe49e 75%, 
+        #ffffff 100%
+      );
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: textGlowFlow 7s linear infinite;
+      text-shadow: 0 0 40px rgba(232, 197, 71, 0.15);
+    }
+
+    @keyframes textGlowFlow {
+      0% { background-position: 0% center; }
+      100% { background-position: 200% center; }
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-body);
+      font-size: clamp(0.95rem, 1.8vw, 1.2rem);
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+      letter-spacing: 0.01em;
+    }
+
+    @media (max-width: 768px) {
+      .hero-overlay { padding-bottom: 50px; }
+      .hero-title { font-size: 2.2rem; }
+      .hero-subtitle { font-size: 0.95rem; }
+    }
+
+    /* ==============================
+       STATS SUMMARY COMPONENT
+    ============================== */
+    .stats-section {
+      padding: 60px 5% 20px;
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 5;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      background: rgba(17, 17, 17, 0.6);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-lg);
+      padding: 40px 30px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    .stat-item {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+    .stat-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: -12px;
+      top: 15%;
+      height: 70%;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.1), transparent);
+    }
+    .stat-number {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 800;
+      color: var(--gold-light);
+      line-height: 1;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+    .stat-label {
+      font-size: clamp(0.72rem, 1.2vw, 0.88rem);
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.6);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    @media (max-width: 991px) {
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 40px 24px; }
+      .stat-item:nth-child(2)::after { display: none; }
+    }
+    @media (max-width: 560px) {
+      .stats-grid { grid-template-columns: 1fr; gap: 32px; padding: 35px 20px; }
+      .stat-item:not(:last-child)::after { display: none; }
+    }
+
+    /* ==============================
+       SECTION COMMONS
+    ============================== */
+    .section-title {
+      padding: 80px 5% 24px;
+      max-width: 1400px;
+      margin: 0 auto;
+      font-family: var(--font-heading);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--white);
+    }
+    .section-title span {
+      color: var(--gold);
+    }
+    .slider-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+      padding: 10px 0 40px;
+    }
+    .slider-track {
+      display: flex;
+      width: max-content;
+    }
+
+    /* ==============================
+       REVIEWS SLIDER (LEFT SCROLLING)
+    ============================== */
+    .review-track {
+      animation: scrollLeft 35s linear infinite;
+    }
+    .review-track:hover {
+      animation-play-state: paused;
+    }
+    .review-card {
+      width: 320px;
+      height: 480px;
+      margin: 0 16px;
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background-color: var(--black-soft);
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      flex-shrink: 0;
+    }
+    .review-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .review-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 30px 20px 20px;
+      background: linear-gradient(to top, rgba(8, 8, 8, 0.95) 0%, rgba(8, 8, 8, 0.6) 70%, transparent 100%);
+    }
+    .review-text {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.4;
+    }
+
+    /* ==============================
+       VERTICAL DESTINATIONS GRID
+    ============================== */
+    .destinations-grid-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 10px 5% 60px;
+    }
+    .destinations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+      width: 100%;
+    }
+    .dest-card {
+      height: 240px;
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      cursor: pointer;
+      transition: transform 0.4s var(--ease-out-expo);
+    }
+    .dest-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s var(--ease-out-expo);
+    }
+    .dest-card:hover img {
+      transform: scale(1.08);
+    }
+    .dest-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(8, 8, 8, 0.8) 0%, rgba(8, 8, 8, 0.2) 60%, transparent 100%);
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+      transition: background 0.3s;
+    }
+    .dest-card:hover .dest-overlay {
+      background: linear-gradient(to top, rgba(8, 8, 8, 0.9) 0%, rgba(201, 162, 39, 0.15) 100%);
+    }
+    .dest-name {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.02em;
+      transition: color 0.3s;
+    }
+    .dest-card:hover .dest-name {
+      color: var(--gold-light);
+    }
+
+    /* ==============================
+       OTHER SERVICES COMPONENT
+    ============================== */
+    .services-section {
+      padding: 40px 5% 80px;
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 5;
+    }
+    .services-flex-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      background: rgba(17, 17, 17, 0.4);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-lg);
+      padding: 50px 40px;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+    .service-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      padding: 0 10px;
+    }
+    .service-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: -10px;
+      top: 10%;
+      height: 80%;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.15), transparent);
+    }
+    .service-icon-circle {
+      width: 85px;
+      height: 85px;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      position: relative;
+      background: rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0 20px rgba(201, 162, 39, 0.05);
+      transition: transform 0.3s var(--transition), box-shadow 0.3s;
+    }
+    .service-icon-circle::before {
+      content: '';
+      position: absolute;
+      inset: 4px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .service-item:hover .service-icon-circle {
+      transform: scale(1.05);
+      box-shadow: var(--shadow-gold);
+    }
+    .service-icon-circle i {
+      font-size: 32px;
+      color: var(--white);
+    }
+    .service-label {
+      font-family: var(--font-heading);
+      font-size: clamp(0.85rem, 1.2vw, 1.05rem);
+      font-weight: 700;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      line-height: 1.4;
+      max-width: 200px;
+    }
+    @media (max-width: 991px) {
+      .services-flex-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 20px;
+        padding: 40px 20px;
+      }
+      .service-item:nth-child(2)::after { display: none; }
+    }
+    @media (max-width: 560px) {
+      .services-flex-container {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+      .service-item:not(:last-child)::after { display: none; }
+      .service-icon-circle { width: 75px; height: 75px; margin-bottom: 14px; }
+      .service-icon-circle i { font-size: 26px; }
+    }
+
+    /* --- ANIMATIONS --- */
+    @keyframes scrollLeft {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ==============================
+       CONTACT SECTION
+    ============================== */
+    #contact { background: var(--black-soft); position: relative; overflow: hidden; padding: 80px 5%; }
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 50px; align-items: start;
+      margin-top: 30px;
+    }
+    @media (max-width: 900px) { .contact-layout { grid-template-columns: 1fr; gap: 40px; } }
+
+    .contact-info-title {
+      font-family: var(--font-heading);
+      font-size: 1.25rem; font-weight: 700; color: var(--white);
+      margin-bottom: 24px;
+    }
+    .contact-info-title span { color: var(--gold); }
+
+    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    .info-card {
+      display: flex; align-items: flex-start; gap: 14px;
+      background: var(--glass); border: 1px solid var(--glass-border);
+      border-radius: var(--radius); padding: 18px;
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      transition: background 0.3s, border-color 0.3s, transform 0.3s;
+      text-decoration: none; color: inherit;
+    }
+    .info-card:hover {
+      background: rgba(201,162,39,0.06);
+      border-color: rgba(201,162,39,0.3);
+      transform: translateY(-2px);
+    }
+    .info-card-wide { grid-column: span 2; }
+    .info-icon {
+      width: 38px; height: 38px; border-radius: 10px; flex-shrink: 0;
+      background: linear-gradient(135deg, rgba(201,162,39,0.2), rgba(201,162,39,0.05));
+      border: 1px solid rgba(201,162,39,0.25);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gold); font-size: 0.95rem;
+    }
+    .info-body { flex: 1; }
+    .info-label {
+      font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 4px;
+    }
+    .info-value {
+      font-family: var(--font-heading);
+      font-size: 0.9rem; font-weight: 600; color: var(--white);
+      line-height: 1.4; overflow-wrap: break-word; word-break: break-word;
+    }
+    .info-value small { display: block; font-size: 0.72rem; font-weight: 400; color: rgba(255,255,255,0.45); margin-top: 2px; }
+
+    @media (max-width: 600px) {
+      .info-grid { grid-template-columns: 1fr; }
+      .info-card-wide { grid-column: span 1; }
+      .info-card { padding: 14px; gap: 12px; }
+    }
+
+    .map-card { background: var(--glass); border: 1px solid var(--glass-border); border-radius: var(--radius); overflow: hidden; backdrop-filter: blur(12px); }
+    .map-inner {
+      width: 100%; height: 260px;
+      background: linear-gradient(135deg, #111 0%, #1a1a2e 50%, #0f3460 100%);
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+    .map-grid {
+      position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(201,162,39,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(201,162,39,0.06) 1px, transparent 1px);
+      background-size: 30px 30px;
+    }
+    .map-roads {
+      position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(201,162,39,0.1) 2px, transparent 2px), linear-gradient(90deg, rgba(201,162,39,0.1) 2px, transparent 2px);
+      background-size: 80px 80px; transform: rotate(-10deg) scale(1.3);
+    }
+    .map-pin { relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+    .map-pin-dot {
+      width: 14px; height: 14px; border-radius: 50%;
+      background: var(--gold); border: 2.5px solid var(--black);
+      box-shadow: 0 0 0 6px rgba(201,162,39,0.3); animation: mapPulse 2s ease-in-out infinite;
+    }
+    @keyframes mapPulse {
+      0%, 100% { box-shadow: 0 0 0 6px rgba(201,162,39,0.3); }
+      50% { box-shadow: 0 0 0 12px rgba(201,162,39,0.1); }
+    }
+    .map-pin-label { background: var(--gold); color: var(--black); font-family: var(--font-heading); font-size: 0.65rem; font-weight: 700; padding: 3px 10px; border-radius: 30px; white-space: nowrap; }
+    .map-inner iframe { border: 0; width: 100%; height: 100%; }
+    .map-footer { padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--glass-border); }
+    .map-footer-text { font-size: 0.78rem; color: rgba(255,255,255,0.5); }
+    .map-footer-badge { display: flex; align-items: center; gap: 6px; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); }
+
+    /* ==============================
+       FOOTER
+    ============================== */
+    footer { background: #050505; border-top: 1px solid rgba(255,255,255,0.05); padding: 80px 5% 0; position: relative; overflow: hidden; }
+    footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: 0.4; }
+    .footer-grid { display: grid; grid-template-columns: 2.2fr 1fr 1fr 1.3fr; gap: 60px; margin-bottom: 60px; }
+    @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; } }
+    @media (max-width: 560px) { .footer-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+    .footer-logo { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+    .footer-logo-img { width: 54px; height: 54px; border-radius: 50%; overflow: hidden; border: 1.5px solid rgba(201,162,39,0.5); }
+    .footer-logo-img img { width: 100%; height: 100%; object-fit: cover; }
+    .footer-brand-name { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; color: var(--white); line-height: 1.3; }
+    .footer-brand-sub { font-size: 0.6rem; letter-spacing: 0.3em; color: var(--gold); text-transform: uppercase; }
+    .footer-desc { font-size: 0.82rem; color: rgba(255,255,255,0.4); line-height: 1.8; max-width: 300px; margin-bottom: 24px; }
+    .footer-socials { display: flex; gap: 12px; }
+    .footer-social-link {
+      width: 40px; height: 40px; border-radius: 10px;
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.5); font-size: 0.9rem;
+      transition: background 0.3s, color 0.3s, transform 0.3s, border-color 0.3s;
+    }
+    .footer-social-link:hover { background: rgba(201,162,39,0.15); color: var(--gold); border-color: rgba(201,162,39,0.3); transform: translateY(-3px); }
+
+    .footer-col-title { font-family: var(--font-heading); font-size: 0.82rem; font-weight: 700; color: var(--white); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .footer-links li { margin-bottom: 12px; }
+    .footer-links a { font-size: 0.82rem; color: rgba(255,255,255,0.45); transition: color 0.3s, padding-left 0.3s; display: inline-flex; align-items: center; gap: 6px; }
+    .footer-links a:hover { color: var(--white); padding-left: 4px; }
+
+    .footer-contact-item { display: flex; gap: 12px; margin-bottom: 16px; }
+    .footer-contact-icon { color: var(--gold); font-size: 0.85rem; margin-top: 2px; flex-shrink: 0; }
+    .footer-contact-text { font-size: 0.8rem; color: rgba(255,255,255,0.45); line-height: 1.6; }
+    .footer-contact-text strong { color: rgba(255,255,255,0.75); display: block; margin-bottom: 2px; font-size: 0.78rem; }
+
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.05); padding: 24px 0 32px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-copy { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+    .footer-copy span { color: var(--gold); }
+
+    .dev-badge {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border-radius: 50px; padding: 8px 18px; text-decoration: none;
+      transition: background 0.35s, border-color 0.35s, transform 0.35s var(--ease-out-expo), box-shadow 0.35s;
+    }
+    .dev-badge:hover { background: rgba(201,162,39,0.1); border-color: rgba(201,162,39,0.3); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(201,162,39,0.2); }
+    .dev-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); animation: badgePulse 2s ease infinite; }
+    @keyframes badgePulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+    .dev-badge-text { font-size: 0.68rem; color: rgba(255,255,255,0.45); letter-spacing: 0.05em; }
+    .dev-badge-name { font-family: var(--font-heading); font-size: 0.78rem; font-weight: 700; background: linear-gradient(90deg, var(--gold), var(--gold-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .dev-badge-icon { color: rgba(255,255,255,0.3); font-size: 0.7rem; }
+    .dev-badge:hover .dev-badge-icon { color: var(--gold); }
+
+    /* ==============================
+       FLOATING WHATSAPP ELEMENT
+    ============================== */
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 60px;
+      height: 60px;
+      background-color: var(--whatsapp-green);
+      color: #FFFFFF;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3), 0 4px 12px rgba(0, 0, 0, 0.4);
+      z-index: 999;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(0.6) translateY(20px);
+      transition: transform 0.4s var(--ease-out-expo), opacity 0.4s ease, visibility 0.4s ease, box-shadow 0.3s;
+    }
+    .floating-whatsapp.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1) translateY(0);
+    }
+    .floating-whatsapp:hover {
+      transform: scale(1.08) translateY(-3px);
+      box-shadow: 0 12px 28px rgba(37, 211, 102, 0.45), 0 6px 16px rgba(0, 0, 0, 0.3);
+    }
+    .floating-whatsapp::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: 50%;
+      border: 2px solid var(--whatsapp-green);
+      opacity: 0.7;
+      animation: whatsappPing 2s ease-out infinite;
+      pointer-events: none;
+    }
+    @keyframes whatsappPing {
+      0% { transform: scale(1); opacity: 0.7; }
+      100% { transform: scale(1.3); opacity: 0; }
+    }
+    @media (max-width: 480px) {
+      .floating-whatsapp {
+        bottom: 20px;
+        right: 20px;
+        width: 52px;
+        height: 52px;
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE LOADER -->
+  <div id="page-loader" role="status" aria-label="Loading page">
+    <div class="loader-logo">
+      <img src="assets/images/logo.jpg" alt="Arappurayil Logo" />
+    </div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    <p class="loader-text">Crafting your journey</p>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="#home" class="nav-logo" aria-label="Arappurayil Travel Agency Home">
+      <div class="nav-logo-img">
+        <img src="assets/images/logo.jpg" alt="Arappurayil Logo" />
+      </div>
+      <div class="nav-logo-text">
+        <span class="nav-brand">Arappurayil</span>
+        <span class="nav-sub">Travel Agency</span>
+      </div>
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+      <li><a href="#reviews" class="nav-link" data-section="reviews">Gallery</a></li>
+      <li><a href="#destinations" class="nav-link" data-section="destinations">Destinations</a></li>
+      <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+    </ul>
+
+    <a href="#contact" class="nav-cta" aria-label="Contact us">
+      <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+      <span>Contact</span>
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <a href="#home" class="mobile-link"><span class="num">01</span>Home</a>
+    <a href="#destinations" class="mobile-link"><span class="num">02</span>Destinations</a>
+    <a href="#reviews" class="mobile-link"><span class="num">03</span>Reviews</a>
+    <a href="#contact" class="mobile-link"><span class="num">04</span>Contact</a>
+    <div class="mobile-social">
+      <a href="https://wa.me/916238305540" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="https://instagram.com/arappurayil_travel_agency" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="tel:+916238305540" aria-label="Call us"><i class="fa-solid fa-phone"></i></a>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <!-- Desktop Video Asset (Stretches to fit) -->
+    <video class="hero-video desktop-vid" autoplay loop muted playsinline>
+      <source src="Herovideopc.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <!-- Mobile Video Asset -->
+    <video class="hero-video mobile-vid" autoplay loop muted playsinline>
+      <source src="Herovideo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hero-overlay">
+      <div class="hero-text-container">
+        <h1 class="hero-title">Explore The Unseen World</h1>
+        <p class="hero-subtitle">Experience authentic luxury journeys curated by passionate travelers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS SUMMARY SECTION -->
+  <section class="stats-section">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number" data-target="1000">0+</div>
+        <div class="stat-label">Trips Completed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="5000">0+</div>
+        <div class="stat-label">Happy Customers</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="100">0+</div>
+        <div class="stat-label">Hotel &amp; Transport Partners</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="250">0+</div>
+        <div class="stat-label">Destinations</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAVEL STORIES SECTION -->
+  <section id="reviews">
+    <h2 class="section-title">Traveler <span>Stories</span></h2>
+    <div class="slider-container">
+      <div class="slider-track review-track">
+        <!-- Card 1 -->
+        <div class="review-card">
+          <img src="assets/images/1.jpg" alt="Trip Photo">
+          <div class="review-overlay">
+            <p class="review-text">"An unforgettable, scenic moment with friends celebrating right behind a massive waterfall."</p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="review-card">
+          <img src="assets/images/2.jpg" alt="Trip Photo">
+          <div class="review-overlay">
+            <p class="review-text">"A fantastic group trip filled with smiles against a stunning snow-covered mountain backdrop."</p>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="review-card">
+          <img src="assets/images/3.jpg" alt="Trip Photo">
+          <div class="review-overlay">
+            <p class="review-text">"An exhilarating and thrilling paragliding adventure showcasing pure excitement."</p>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="review-card">
+          <img src="assets/images/4.jpg" alt="Trip Photo">
+          <div class="review-overlay">
+            <p class="review-text">"A joyful and picturesque moment shared among friends under a beautiful natural waterfall."</p>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="review-card">
+          <img src="assets/images/5.jpg" alt="Trip Photo">
+          <div class="review-overlay">
+            <p class="review-text">"Cheerful, fun-filled memories of playing in the deep snow with loved ones."</p>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="review-card">
+          <img src="assets/images/6.jpg" alt="Trip Photo">
+          <div class="review-overlay">
+            <p class="review-text">"A classic, well-organized family tour visit to the iconic Taj Mahal."</p>
+          </div>
+        </div>
+        <!-- Card 7 -->
+        <div class="review-card">
+          <img src="assets/images/7.jpg" alt="Trip Photo">
+          <div class="review-overlay">
+            <p class="review-text">"A peaceful, culturally rich family gathering during a memorable visit to the Golden Temple."</p>
+          </div>
+        </div>
+        <!-- Card 8 -->
+        <div class="review-card">
+          <img src="assets/images/8.jpg" alt="Trip Photo">
+          <div class="review-overlay">
+            <p class="review-text">"Heartwarming snowy mountain selfies capturing pure happiness and great company."</p>
+          </div>
+        </div>
+
+        <!-- ================= DUPLICATES ================= -->
+        <div class="review-card">
+          <img src="assets/images/1.jpg" alt="Trip Photo">
+          <div class="review-overlay">
+            <p class="review-text">"Breathtaking views, an absolute lifetime memory!"</p>
+          </div>
+        </div>
+        <div class="review-card">
+          <img src="assets/images/2.jpg" alt="Trip Photo">
+          <div class="review-overlay">
+            <p class="review-text">"Found hidden gems away from the tourist crowds."</p>
+          </div>
+        </div>
+        <div class="review-card">
+          <img src="assets/images/3.jpg" alt="Trip Photo">
+          <div class="review-overlay">
+            <p class="review-text">"Unbelievable food culture and amazing hospitality!"</p>
+          </div>
+        </div>
+        <div class="review-card">
+          <img src="assets/images/4.jpg" alt="Trip Photo">
+          <div class="review-overlay">
+            <p class="review-text">"The mountain trek was challenging but worth it."</p>
+          </div>
+        </div>
+        <div class="review-card">
+          <img src="assets/images/5.jpg" alt="Trip Photo">
+          <div class="review-overlay">
+            <p class="review-text">"An incredible cultural journey filled with vibrant colors."</p>
+          </div>
+        </div>
+        <div class="review-card">
+          <img src="assets/images/6.jpg" alt="Trip Photo">
+          <div class="review-overlay">
+            <p class="review-text">"Pure luxury combined with raw, untouched nature."</p>
+          </div>
+        </div>
+        <div class="review-card">
+          <img src="assets/images/7.jpg" alt="Trip Photo">
+          <div class="review-overlay">
+            <p class="review-text">"The perfect itinerary. Everything was seamlessly arranged!"</p>
+          </div>
+        </div>
+        <div class="review-card">
+          <img src="assets/images/8.jpg" alt="Trip Photo">
+          <div class="review-overlay">
+            <p class="review-text">"Watching the sunset over the horizon was magical."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOP DESTINATIONS SECTION -->
+  <section id="destinations">
+    <h2 class="section-title">Top <span>Destinations</span></h2>
+    <div class="destinations-grid-container">
+      <div class="destinations-grid">
+        <div class="dest-card">
+          <img src="https://i.pinimg.com/736x/a1/2a/73/a12a7300037b528eb20262d543145ec9.jpg" alt="Kashmir">
+          <div class="dest-overlay"><span class="dest-name">Kashmir</span></div>
+        </div>
+        <div class="dest-card">
+          <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&width=600&auto=format&fit=crop" alt="Kerala">
+          <div class="dest-overlay"><span class="dest-name">Kerala</span></div>
+        </div>
+        <div class="dest-card">
+          <img src="https://i.pinimg.com/736x/85/35/86/853586db1e94ddaa106edf37dfef98da.jpg" alt="Punjab">
+          <div class="dest-overlay"><span class="dest-name">Punjab</span></div>
+        </div>
+        <div class="dest-card">
+          <img src="https://i.pinimg.com/736x/ff/22/f6/ff22f60060373804ff0a3058331cfd41.jpg" alt="Manali-Kasol">
+          <div class="dest-overlay"><span class="dest-name">Manali-Kasol</span></div>
+        </div>
+        <div class="dest-card">
+          <img src="https://i.pinimg.com/736x/8f/f5/49/8ff5494bac5a55c7e5b6875c9d44a9bb.jpg" alt="Shimla">
+          <div class="dest-overlay"><span class="dest-name">Shimla</span></div>
+        </div>
+        <div class="dest-card">
+          <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&width=600&auto=format&fit=crop" alt="Delhi-Agra">
+          <div class="dest-overlay"><span class="dest-name">Delhi-Agra</span></div>
+        </div>
+        <div class="dest-card">
+          <img src="https://i.pinimg.com/1200x/f8/62/78/f86278093e826eff06eb8c7a5a28f94b.jpg" alt="Rajasthan">
+          <div class="dest-overlay"><span class="dest-name">Rajasthan</span></div>
+        </div>
+        <div class="dest-card">
+          <img src="https://i.pinimg.com/1200x/43/8e/61/438e61c76d669c76d94d9f815523fadc.jpg" alt="Lakshadweep">
+          <div class="dest-overlay"><span class="dest-name">Lakshadweep</span></div>
+        </div>
+        <div class="dest-card">
+          <img src="https://i.pinimg.com/736x/8a/33/6b/8a336bcc05385c10cd309280b9dbdd90.jpg" alt="Goa">
+          <div class="dest-overlay"><span class="dest-name">Goa</span></div>
+        </div>
+        <div class="dest-card">
+          <img src="https://i.pinimg.com/736x/ce/e9/a5/cee9a52da429da924fbcb1e4d68dd93f.jpg" alt="Hyderabad">
+          <div class="dest-overlay"><span class="dest-name">Hyderabad</span></div>
+        </div>
+        <div class="dest-card">
+          <img src="https://i.pinimg.com/736x/12/08/34/12083401782e56720b4fed7e78ec62f2.jpg" alt="Ladakh">
+          <div class="dest-overlay"><span class="dest-name">Ladakh</span></div>
+        </div>
+        <div class="dest-card">
+          <img src="https://i.pinimg.com/736x/b4/c1/4e/b4c14e8408103efa070c2165e61687cf.jpg" alt="Meghalaya">
+          <div class="dest-overlay"><span class="dest-name">Meghalaya</span></div>
+        </div>
+        <div class="dest-card">
+          <img src="https://i.pinimg.com/736x/bd/ad/7f/bdad7f91c13a84ed8e05234db571ec6f.jpg" alt="Sikkim">
+          <div class="dest-overlay"><span class="dest-name">Sikkim</span></div>
+        </div>
+        <div class="dest-card">
+          <img src="https://i.pinimg.com/736x/f1/27/03/f12703a875f3dfdbed4edf95af1b5b79.jpg" alt="Uttarakhand">
+          <div class="dest-overlay"><span class="dest-name">Uttarakhand</span></div>
+        </div>
+        <div class="dest-card">
+          <img src="https://i.pinimg.com/1200x/c9/51/8c/c9518c6754c82f797ece4a8cca5421d8.jpg" alt="Andaman Nicobar">
+          <div class="dest-overlay"><span class="dest-name">Andaman Nicobar Island</span></div>
+        </div>
+        <div class="dest-card">
+          <img src="https://i.pinimg.com/736x/7c/7b/4e/7c7b4e917006dc5348bfa167e4802d8e.jpg" alt="Varanasi">
+          <div class="dest-overlay"><span class="dest-name">Varanasi</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OTHER SERVICES SECTION -->
+  <section class="services-section">
+    <h2 class="section-title">Other <span>Services</span></h2>
+    <div class="services-flex-container">
+      <div class="service-item">
+        <div class="service-icon-circle">
+          <i class="fa-solid fa-earth-americas"></i>
+        </div>
+        <div class="service-label">Tour Packages Across India</div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon-circle">
+          <i class="fa-solid fa-car"></i>
+        </div>
+        <div class="service-label">Cab &amp; Traveller Booking</div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon-circle">
+          <i class="fa-solid fa-hotel"></i>
+        </div>
+        <div class="service-label">Hotel Check-In</div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon-circle">
+          <i class="fa-solid fa-ticket"></i>
+        </div>
+        <div class="service-label">Ticket Bookings</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" aria-label="Contact us">
+    <div class="info-label" style="margin-left:5%;">Get in Touch</div>
+    <h2 class="section-title" style="padding-top:0;">Let's Design Your<br /><span>Next Escape</span></h2>
+
+    <div class="contact-layout">
+      <div>
+        <p class="contact-info-title">Connect with us on <span>any platform</span></p>
+        <div class="info-grid">
+          <a href="tel:+916238305540" class="info-card" aria-label="Call phone">
+            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="info-body">
+              <div class="info-label">Phone</div>
+              <div class="info-value">+91 62383 05540</div>
+            </div>
+          </a>
+
+          <a href="https://wa.me/916238305540" target="_blank" rel="noopener noreferrer" class="info-card" aria-label="Open WhatsApp chat">
+            <div class="info-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <div class="info-body">
+              <div class="info-label">WhatsApp</div>
+              <div class="info-value">+91 62383 05540<small>Instant response</small></div>
+            </div>
+          </a>
+
+          <a href="mailto:arappurayiltravelagency@gmail.com" class="info-card info-card-wide" aria-label="Email Arappurayil Travel Agency">
+            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="info-body">
+              <div class="info-label">Email Address</div>
+              <div class="info-value">arappurayiltravelagency@gmail.com<small>Official support inquiry</small></div>
+            </div>
+          </a>
+
+          <a href="https://instagram.com/arappurayil_travel_agency" target="_blank" rel="noopener noreferrer" class="info-card" aria-label="Visit Instagram">
+            <div class="info-icon"><i class="fa-brands fa-instagram"></i></div>
+            <div class="info-body">
+              <div class="info-label">Instagram</div>
+              <div class="info-value">@arappurayil_travel<small>Travel updates</small></div>
+            </div>
+          </a>
+
+          <div class="info-card" style="cursor:default;">
+            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="info-body">
+              <div class="info-label">Kerala Office</div>
+              <div class="info-value">TC X/2373(2)<small>Mannanthala P.O, Trivandrum</small></div>
+            </div>
+          </div>
+
+          <div class="info-card info-card-wide" style="cursor:default;">
+            <div class="info-icon"><i class="fa-solid fa-building"></i></div>
+            <div class="info-body">
+              <div class="info-label">Punjab Office</div>
+              <div class="info-value">No-340, Satnampura, Phagwara, Kapurthala, Punjab</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="map-card" aria-label="Office location map">
+          <div class="map-inner">
+            <div class="map-grid" aria-hidden="true"></div>
+            <div class="map-roads" aria-hidden="true"></div>
+            <div class="map-pin">
+              <div class="map-pin-dot" aria-hidden="true"></div>
+              <div class="map-pin-label">Arappurayil Travel</div>
+            </div>
+          </div>
+          <div class="map-footer">
+            <span class="map-footer-text">Trivandrum, Kerala &amp; Punjab Offices</span>
+            <a href="https://maps.google.com/?q=Mannanthala,Trivandrum,Kerala" target="_blank" rel="noopener noreferrer" class="map-footer-badge">
+              <i class="fa-solid fa-map-location-dot" aria-hidden="true"></i> <span>Open Map</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <div class="footer-logo-img">
+            <img src="assets/images/logo.jpg" alt="Arappurayil Travel Agency Logo" />
+          </div>
+          <div>
+            <div class="footer-brand-name">Arappurayil</div>
+            <div class="footer-brand-sub">Travel Agency</div>
+          </div>
+        </div>
+        <p class="footer-desc">Crafting premium journeys across India's most iconic landscapes. Every trip is a custom masterpiece built for you.</p>
+        <div class="footer-socials">
+          <a href="https://wa.me/916238305540" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://instagram.com/arappurayil_travel_agency" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="tel:+916238305540" class="footer-social-link" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#reviews">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Destinations</h4>
+        <ul class="footer-links">
+          <li><a href="#destinations">Kashmir</a></li>
+          <li><a href="#destinations">Kerala</a></li>
+          <li><a href="#destinations">Punjab</a></li>
+          <li><a href="#destinations">Manali-Kasol</a></li>
+          <li><a href="#destinations">Shimla</a></li>
+          <li><a href="#destinations">Delhi-Agra</a></li>
+          <li><a href="#destinations">Rajasthan</a></li>
+          <li><a href="#destinations">Lakshadweep</a></li>
+          <li><a href="#destinations">Goa</a></li>
+          <li><a href="#destinations">Hyderabad</a></li>
+          <li><a href="#destinations">Ladakh</a></li>
+          <li><a href="#destinations">Meghalaya</a></li>
+          <li><a href="#destinations">Sikkim</a></li>
+          <li><a href="#destinations">Uttarakhand </a></li>
+          <li><a href="#destinations">Andaman Nicobar Island</a></li>
+          <li><a href="#destinations">Varanasi</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-col-title">Contact Details</h4>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-phone footer-contact-icon"></i>
+          <div class="footer-contact-text">
+            <strong>Direct Line</strong>
+            <a href="tel:+916238305540" style="color:rgba(255,255,255,0.45);transition:color 0.3s;" onmouseover="this.style.color='#C9A227'" onmouseout="this.style.color='rgba(255,255,255,0.45)'">+91 62383 05540</a>
+          </div>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-envelope footer-contact-icon"></i>
+          <div class="footer-contact-text">
+            <strong>Email Us</strong>
+            <a href="mailto:arappurayiltravelagency@gmail.com" style="color:rgba(255,255,255,0.45);transition:color 0.3s;" onmouseover="this.style.color='#C9A227'" onmouseout="this.style.color='rgba(255,255,255,0.45)'">arappurayiltravelagency@gmail.com</a>
+          </div>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-brands fa-whatsapp footer-contact-icon"></i>
+          <div class="footer-contact-text">
+            <strong>WhatsApp Message</strong>
+            <a href="https://wa.me/916238305540" target="_blank" rel="noopener noreferrer" style="color:rgba(255,255,255,0.45);transition:color 0.3s;" onmouseover="this.style.color='#C9A227'" onmouseout="this.style.color='rgba(255,255,255,0.45)'">Open Chat</a>
+          </div>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-location-dot footer-contact-icon"></i>
+          <div class="footer-contact-text"><strong>Kerala Office</strong>TC X/2373(2), Mannanthala, Trivandrum</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; <span id="year"></span> <span>Arappurayil Travel Agency</span>. All rights reserved.</p>
+      <a href="https://quadmedia-tvm.vercel.app/" target="_blank" rel="noopener noreferrer" class="dev-badge" aria-label="Meet the developer Karthik">
+        <div class="dev-badge-dot"></div>
+        <span class="dev-badge-text">Designed &amp; Built by</span>
+        <span class="dev-badge-name">QUADMEDIA.TVM</span>
+        <i class="fa-solid fa-arrow-up-right-from-square dev-badge-icon"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/916238305540" target="_blank" rel="noopener noreferrer" class="floating-whatsapp" id="whatsapp-sticky" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    'use strict';
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const fill = document.querySelector('.loader-bar-fill');
+      const loader = document.getElementById('page-loader');
+      const whatsappBtn = document.getElementById('whatsapp-sticky');
+      
+      if (fill) {
+        fill.style.transition = 'width 2s cubic-bezier(0.1, 0.8, 0.25, 1)';
+        requestAnimationFrame(() => { fill.style.width = '100%'; });
+      }
+      setTimeout(() => {
+        if (loader) {
+          loader.classList.add('hidden');
+          document.body.style.overflow = '';
+        }
+        if (whatsappBtn) {
+          whatsappBtn.classList.add('visible');
+        }
+      }, 2000);
+    });
+
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    (function() {
+      const nav = document.getElementById('navbar');
+      if (!nav) return;
+      let ticking = false;
+      function update() {
+        const s = window.scrollY;
+        s > 60 ? nav.classList.add('scrolled') : nav.classList.remove('scrolled');
+        ticking = false;
+      }
+      window.addEventListener('scroll', () => { if (!ticking) { requestAnimationFrame(update); ticking = true; } }, { passive: true });
+    })();
+
+    (function() {
+      const links = document.querySelectorAll('.nav-link[data-section]');
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            const id = e.target.getAttribute('id');
+            links.forEach(l => l.classList.toggle('active', l.dataset.section === id));
+          }
+        });
+      }, { threshold: 0.25, rootMargin: '-90px 0px -45% 0px' });
+      ['home','destinations','reviews','contact'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) obs.observe(el);
+      });
+    })();
+
+    (function() {
+      const btn = document.getElementById('hamburger');
+      const menu = document.getElementById('mobile-menu');
+      if (!btn || !menu) return;
+      let open = false;
+      function toggle() {
+        open = !open;
+        btn.classList.toggle('open', open);
+        menu.classList.toggle('open', open);
+        btn.setAttribute('aria-expanded', String(open));
+        document.body.style.overflow = open ? 'hidden' : '';
+      }
+      btn.addEventListener('click', toggle);
+      menu.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => { if (open) toggle(); }));
+    })();
+
+    (function() {
+      if (window.innerWidth < 768) return;
+      document.querySelectorAll('.dest-card').forEach(card => {
+        card.addEventListener('mousemove', function(e) {
+          const rect = this.getBoundingClientRect();
+          const rx = ((e.clientY - rect.top - rect.height / 2) / (rect.height / 2)) * -4;
+          const ry = ((e.clientX - rect.left - rect.width / 2) / (rect.width / 2)) * 4;
+          this.style.transform = 'perspective(600px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) translateY(-5px)';
+        });
+        card.addEventListener('mouseleave', function() { this.style.transform = ''; });
+      });
+    })();
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const top = target.getBoundingClientRect().top + window.scrollY - 90;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+
+    (function() {
+      const statsSection = document.querySelector('.stats-section');
+      const counters = document.querySelectorAll('.stat-number');
+      if (!statsSection || counters.length === 0) return;
+
+      let animated = false;
+
+      const startCounting = () => {
+        counters.forEach(counter => {
+          const target = parseInt(counter.getAttribute('data-target'), 10);
+          const duration = 2000;
+          const startTime = performance.now();
+
+          const updateNumber = (currentTime) => {
+            const elapsedTime = currentTime - startTime;
+            if (elapsedTime >= duration) {
+              counter.textContent = target + '+';
+              return;
+            }
+            const progress = elapsedTime / duration;
+            const easeProgress = progress * (2 - progress);
+            const currentValue = Math.floor(easeProgress * target);
+            
+            counter.textContent = currentValue + '+';
+            requestAnimationFrame(updateNumber);
+          };
+
+          requestAnimationFrame(updateNumber);
+        });
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !animated) {
+            animated = true;
+            startCounting();
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      observer.observe(statsSection);
+    })();
+  </script>
+</body>
+</html>
